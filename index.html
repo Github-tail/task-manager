@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>GTD Tools - Anotherhome</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fontello.css">
+    
+</head>
+<body>
+    <header>
+        <h1>GTD Tools</h1>
+    </header>
+    <div class="content">
+        <div class="type">
+            <ul class="type-wrap">
+                <li>
+                    <h2 id="type-all" onclick="typeClick(this)"></h2>
+                </li>  
+                <li>
+                    <h2><i class="icon-menu"></i>分类列表</h2>
+                    <ul class="item-wrap"></ul>
+                </li>
+            </ul>
+            <div class="add" onclick="newType()">
+                <i class="icon-plus"></i>
+            </div>
+        </div>
+        <div class="task">
+            <div class="status">
+                <ul>
+                    <li class="choose" onclick="statusClick(this)">所有</li>
+                    <li onclick="statusClick(this)"><i class="icon-emo-surprised"></i>未完成</li>
+                    <li onclick="statusClick(this)"><i class="icon-emo-grin"></i>已完成</li>
+                </ul>
+            </div>
+            <ul class="task-wrap"></ul>
+            <div class="add" onclick="newTask()">
+                <i class="icon-plus"></i>
+            </div>
+        </div>
+        <div class="details">
+            <div class="task-info task-title">
+                任务标题：
+                <span></span>
+                <input type="text" class="myText taskText" placeholder="在此输入任务标题">
+                <div class="set">
+                    <i class="icon-check" onclick="finishTask()"></i>
+                    <i class="icon-edit" onclick="editTask()"></i>
+                </div>
+            </div>
+            <div class="task-info task-date">
+                任务日期：
+                <span></span>
+                <input type="text" class="myText taskText" placeholder="在此输入任务日期（格式：2016-01-01）">
+            </div>
+            <div class="task-content">
+                <span></span>
+                <textarea class="myTextArea" placeholder="在此输入任务内容"></textarea>
+                <p class="taskError"></p>
+                <button class="myButton btn3" onclick="cancelAdd()">放弃</button>
+                <button class="myButton btn3" onclick="taskAdd()">保存</button>
+            </div>
+        </div>
+    </div>
+    <div class="pop">
+        <div class="pop-title">
+            <div class="pop-close" onclick="closePop()"></div>
+            <div class="pop-name"></div>
+        </div>
+        <div class="pop-content"></div>
+    </div>
+    <div class="overlay"></div>
+    <script src="js/until.js"></script>
+    <script src="js/task3.js"></script>
+</body>
+</html>
